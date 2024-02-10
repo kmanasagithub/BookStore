@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <style>
+        body{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <h3>Name : <%= book.BookTitle %></h3>
+    <p>ID : <%= book.id %></p>
+    <p>Author : <%= book.Author%></p><br>
+    
+    <form method="post" action="/Books/info/<%= book.id%>?_method=PATCH">
+        Edition : <input type="name" name="edition" placeholder="<%= book.Edition %>">
+        <br>
+        Description : <br>
+        <textarea name="Description" cols="40" rows="15"><%=book.Description %></textarea>
+        <button>Submit</button>
+    </form>
+
+</body>
+</html>

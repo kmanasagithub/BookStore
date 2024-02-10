@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Book</title>
+</head>
+<body>
+    
+    <form method="post" action="/Books/info">
+        Book_author:  <input type="text" name="Author"><br><br>
+        Book-Name:  <input type="text" name="BookTitle">
+        <br><br>   
+        Price :  <input type="number" name="Price" min="100" ><br><br>   
+        Description:<br>
+        <textarea name="Description" cols="30" rows="10">Enter a Short Description...</textarea><br><br>
+        Edition : <input type="text" name="Edition">
+        <br><br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

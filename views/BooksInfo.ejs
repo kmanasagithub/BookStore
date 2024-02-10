@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/s2.css">
+    <title>Books Section</title>
+</head>
+<body>
+    <h1>Books:</h1>
+    <a href="http://localhost:8080/Books/info/new">Create New Book Section</a>
+    <hr>
+    <% for(let book of Books){ %>
+            <div class="book">
+                <p>Book Name : <b><%=book.BookTitle%></b></p>
+                <p>Book Author : <b><%= book.Author%></b></p>
+                <p>Book Id : <%= book.id %></p>
+                <p>Description : <%= book.Description %></p>
+                <br>
+                <a href="http://localhost:8080/Books/info/<%= book.id%>">See in Detail</a>&nbsp;&nbsp;
+                <a href="/Books/info/<%= book.id%>/edit">Update Now!</a>
+                <br><br>
+                <form method="post" action="/Books/info/<%= book.id %>?_method=DELETE">
+                    <button>Delete Info</button>
+                </form>
+            </div>
+            <hr>
+    <% } %>
+    
+    <br>
+    
+    
+</body>
+</html>
